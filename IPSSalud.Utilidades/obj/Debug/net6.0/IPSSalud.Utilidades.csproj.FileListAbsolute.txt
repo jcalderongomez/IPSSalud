@@ -1,0 +1,12 @@
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\bin\Debug\net6.0\IPSSalud.Utilidades.deps.json
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\bin\Debug\net6.0\IPSSalud.Utilidades.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\bin\Debug\net6.0\IPSSalud.Utilidades.pdb
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.csproj.AssemblyReference.cache
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.AssemblyInfoInputs.cache
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.AssemblyInfo.cs
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\refint\IPSSalud.Utilidades.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\IPSSalud.Utilidades.pdb
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Utilidades\obj\Debug\net6.0\ref\IPSSalud.Utilidades.dll

@@ -1,0 +1,304 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\IPSSalud.Presentacion.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.AccesoDatos\\IPSSalud.AccesoDatos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.AccesoDatos\\IPSSalud.AccesoDatos.csproj",
+        "projectName": "IPSSalud.AccesoDatos",
+        "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.AccesoDatos\\IPSSalud.AccesoDatos.csproj",
+        "packagesPath": "C:\\Users\\JUAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.AccesoDatos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JUAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj": {
+                "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj"
+              },
+              "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj",
+        "projectName": "IPSSalud.Modelos",
+        "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj",
+        "packagesPath": "C:\\Users\\JUAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JUAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\IPSSalud.Presentacion.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\IPSSalud.Presentacion.csproj",
+        "projectName": "IPSSalud.Presentacion",
+        "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\IPSSalud.Presentacion.csproj",
+        "packagesPath": "C:\\Users\\JUAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JUAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.AccesoDatos\\IPSSalud.AccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.AccesoDatos\\IPSSalud.AccesoDatos.csproj"
+              },
+              "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj": {
+                "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Modelos\\IPSSalud.Modelos.csproj"
+              },
+              "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj",
+        "projectName": "IPSSalud.Utilidades",
+        "projectPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\IPSSalud.Utilidades.csproj",
+        "packagesPath": "C:\\Users\\JUAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Utilidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JUAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

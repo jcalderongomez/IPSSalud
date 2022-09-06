@@ -1,0 +1,64 @@
+﻿@model IPSSalud.Modelos.Empresa
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo ="Crear Empresa";
+}
+
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </div>
+    @if (Model.Id != 0) 
+    {
+        //
+        titulo = "Actualizar Empresa";
+    }
+    <div class="col-12 border-bottom">
+        <h2 class="text-primary">@titulo</h2>
+    </div>
+    <div class="col8 pt-4">
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="NombreEmpresa"></label>
+                <span asp-validation-for="NombreEmpresa" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <label asp-for="Descripcion"></label>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <label asp-for="Direccion"></label>
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <label asp-for="Telefono"></label>
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <select asp-for="Estado" class="form-control"> 
+                    <option value="true">Activo</option>
+                    <option value="false">Inactivo</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.Id != 0)
+                    { 
+                        <partial name="_BotonesActualizarYRegresar" model="Model.Id"/>
+                    }
+                    else
+                    {
+                        <partial name="_BotonesCrearYRegresar"/>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scritps{
+    <partial name="_ValidationScriptsPartial"/>
+}
+

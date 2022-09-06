@@ -1,0 +1,17 @@
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.AccesoDatos.deps.json
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.AccesoDatos.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.AccesoDatos.pdb
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.Modelos.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.Utilidades.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.Modelos.pdb
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\bin\Debug\net6.0\IPSSalud.Utilidades.pdb
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.AssemblyInfo.cs
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.csproj.CopyComplete
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\refint\IPSSalud.AccesoDatos.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\IPSSalud.AccesoDatos.pdb
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.AccesoDatos\obj\Debug\net6.0\ref\IPSSalud.AccesoDatos.dll
