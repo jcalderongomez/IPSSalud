@@ -14,5 +14,6 @@ namespace IPSSalud.AccesoDatos.Data
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Departamento> Departamento { get; set; }
         public DbSet<Municipio> Municipio { get; set; }
+        public DbSet<UsuarioAplicacion> UsuarioAplicacion { get; set; }
     }
 }

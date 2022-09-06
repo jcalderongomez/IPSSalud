@@ -15,8 +15,7 @@ namespace IPSSalud.AccesoDatos.Repositorio
         public IEmpresaRepositorio Empresa { get; private set; }
         public IDepartamentoRepositorio Departamento { get; private set; }
         public IMunicipioRepositorio Municipio { get; private set; }
-
-        //public IUsuarioAplicacionRepositorio UsuarioAplicacion { get; private set; }
+        public IUsuarioAplicacionRepositorio UsuarioAplicacion { get; private set; }
 
         public UnidadTrabajo(ApplicationDbContext db)
         {
@@ -24,7 +23,7 @@ namespace IPSSalud.AccesoDatos.Repositorio
             Empresa = new EmpresaRepositorio(_db);              //Inicializamos
             Departamento = new DepartamentoRepositorio(_db);    //Inicializamos
             Municipio = new MunicipioRepositorio(_db);          //Inicializamos
-            //UsuarioAplicacion = new UsuarioAplicacionRepositorio(_db); //Inicializamos
+            UsuarioAplicacion = new UsuarioAplicacionRepositorio(_db); //Inicializamos
         }
 
         public void Guardar()

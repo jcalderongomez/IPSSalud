@@ -11,8 +11,7 @@ namespace IPSSalud.AccesoDatos.Repositorio.IRepositorio
         IEmpresaRepositorio Empresa { get; }
         IDepartamentoRepositorio Departamento { get; }
         IMunicipioRepositorio Municipio { get; }
-        //IUsuarioAplicacionRepositorio UsuarioAplicacion { get; }
-
+        IUsuarioAplicacionRepositorio UsuarioAplicacion { get; }
         void Guardar();
     }
 }
