@@ -2916,6 +2916,9 @@
         }
       },
       "IPSSalud.Utilidades/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.8"
+        },
         "runtime": {
           "IPSSalud.Utilidades.dll": {}
         },

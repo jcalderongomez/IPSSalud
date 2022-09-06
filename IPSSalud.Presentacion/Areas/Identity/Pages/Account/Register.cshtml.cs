@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using IPSSalud.AccesoDatos.Repositorio.IRepositorio;
 using IPSSalud.Modelos;
+using IPSSalud.Utilidades;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -25,17 +28,24 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IUnidadTrabajo _unidadTrabajo;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager,
+            IUnidadTrabajo unidadTrabajo)
+            
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
+            _unidadTrabajo = unidadTrabajo;
         }
 
         [BindProperty]
@@ -97,22 +107,51 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+
+
+                var user = new UsuarioAplicacion
+                {
+                    UserName = Input.UserName,
+                    Email = Input.Email,
+                    Nombres = Input.Nombres,
+                    Apellidos = Input.Apellidos,
+                    Direccion = Input.Direccion,
+                    MunicipioId = Input.MunicipioId,
+                    Role = Input.Role
+                };
+
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
+                    if (!await _roleManager.RoleExistsAsync(DS.Role_Admin))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(DS.Role_Admin));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(DS.Role_JefeTatelentoHumano))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(DS.Role_JefeTatelentoHumano));
+                    }
+                    if (!await _roleManager.RoleExistsAsync(DS.Role_AuxiliarAdmin))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(DS.Role_AuxiliarAdmin));
+                    }
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _userManager.AddToRoleAsync(user, DS.Role_Admin);
+
+
+                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    //var callbackUrl = Url.Page(
+                    //    "/Account/ConfirmEmail",
+                    //    pageHandler: null,
+                    //    values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                    //    protocol: Request.Scheme);
+
+                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

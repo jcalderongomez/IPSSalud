@@ -3763,6 +3763,9 @@
       "IPSSalud.Utilidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.8"
+        },
         "compile": {
           "bin/placeholder/IPSSalud.Utilidades.dll": {}
         },
