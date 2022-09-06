@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using IPSSalud.Modelos;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -46,6 +48,11 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [StringLength(15, MinimumLength =4)]
+            [Display(Name = "UserName")]
+            public string UserName { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -60,6 +67,22 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            public string PhoneNumber{ get; set; }
+
+            [Required]
+            public string Nombres { get; set; }
+
+            [Required]
+            public string Apellidos { get; set; }
+            public string Direccion { get; set; }
+
+            public string MunicipioId { get; set; }
+
+            [ForeignKey("MunicipioId")]
+            public Municipio Municipio { get; set; }
+
+            public string Role { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
