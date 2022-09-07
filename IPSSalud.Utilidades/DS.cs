@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IPSSalud.Utilidades
 {
-    public class DS
+    public static class DS
     {
         public const string Role_Admin = "Admin";
         public const string Role_JefeTatelentoHumano = "JefeTatelentoHumano";

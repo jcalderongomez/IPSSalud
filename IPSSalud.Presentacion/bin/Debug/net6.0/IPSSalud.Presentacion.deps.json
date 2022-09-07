@@ -44,6 +44,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.8",
+          "Rotativa": "1.7.4-rc",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "6.0.0.0",
@@ -383,6 +384,62 @@
         }
       },
       "MessagePackAnalyzer/2.1.152": {},
+      "Microsoft.AspNet.Mvc/5.2.3": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.2.3",
+          "Microsoft.AspNet.WebPages": "3.2.3"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Mvc.dll": {
+            "assemblyVersion": "5.2.3.0",
+            "fileVersion": "5.2.30128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Mvc.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Razor/3.2.3": {
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.30128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebPages/3.2.3": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.2.3",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.30128.0"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.30128.0"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.30128.0"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.30128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Helpers.dll": {},
+          "lib/net45/System.Web.WebPages.Deployment.dll": {},
+          "lib/net45/System.Web.WebPages.Razor.dll": {},
+          "lib/net45/System.Web.WebPages.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -1805,6 +1862,17 @@
           "lib/net6.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20105.407"
+          }
+        },
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2021,6 +2089,20 @@
         },
         "compile": {
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
+        }
+      },
+      "Rotativa/1.7.4-rc": {
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "5.2.3"
+        },
+        "runtime": {
+          "lib/net45/Rotativa.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net45/Rotativa.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -4690,6 +4772,27 @@
       "path": "messagepackanalyzer/2.1.152",
       "hashPath": "messagepackanalyzer.2.1.152.nupkg.sha512"
     },
+    "Microsoft.AspNet.Mvc/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i8jZf5QrbcFmjiYWRD7o7qTak/oXKxV80MgP4cZ33A8GC0RBtBIdZ1VHaloGUg+qsHUz5rVkGpwenM+ugDz5PA==",
+      "path": "microsoft.aspnet.mvc/5.2.3",
+      "hashPath": "microsoft.aspnet.mvc.5.2.3.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Razor/3.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-leta+Q73O7+pR8ThTqXmwaNMSqwZQQ3BHfpUHd8S1XaUWe1jRVLitMHqo1AmY7wPNLyankPA1beiUKEGj8Q3Dw==",
+      "path": "microsoft.aspnet.razor/3.2.3",
+      "hashPath": "microsoft.aspnet.razor.3.2.3.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebPages/3.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zbtxBERla5RE/mhftwbrXOzc0r6lh8WcnjpGW7QQe+PvSDDx1BgsTUGzfCXO/vJznHNpY5oCSYLt8Q5vUu7F0g==",
+      "path": "microsoft.aspnet.webpages/3.2.3",
+      "hashPath": "microsoft.aspnet.webpages.3.2.3.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.8": {
       "type": "package",
       "serviceable": true,
@@ -5180,6 +5283,13 @@
       "path": "microsoft.visualstudio.web.codegenerators.mvc/6.0.8",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.6.0.8.nupkg.sha512"
     },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5277,6 +5387,13 @@
       "sha512": "sha512-+o507LXjsN1YVAgmpqKCQZ70cLsXDoVmR8H0Wgy0muiFnOhkXN2+a6PGFBAIuA7qJch/umTYu1hp7Dlh1Qcrgg==",
       "path": "nuget.versioning/6.2.1",
       "hashPath": "nuget.versioning.6.2.1.nupkg.sha512"
+    },
+    "Rotativa/1.7.4-rc": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+jyhCFD/lXbI140O9GgMKk/3D9iEUyBuNnGl91XLpMoiJycJypCDGArH2u3f8zteNLNjmI7/xRGza22L3xpbrw==",
+      "path": "rotativa/1.7.4-rc",
+      "hashPath": "rotativa.1.7.4-rc.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

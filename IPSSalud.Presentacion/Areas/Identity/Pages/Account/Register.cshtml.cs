@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
 using IPSSalud.AccesoDatos.Repositorio.IRepositorio;
 using IPSSalud.Modelos;
 using IPSSalud.Utilidades;
@@ -16,8 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
 {
@@ -58,7 +50,7 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [StringLength(15, MinimumLength =4)]
+            [StringLength(15, MinimumLength = 4)]
             [Display(Name = "UserName")]
             public string UserName { get; set; }
 
@@ -78,26 +70,41 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            public string PhoneNumber{ get; set; }
+            public string PhoneNumber { get; set; }
 
             [Required]
             public string Nombres { get; set; }
 
             [Required]
             public string Apellidos { get; set; }
+            
             public string Direccion { get; set; }
 
-            public string MunicipioId { get; set; }
+            
+            //public string MunicipioId { get; set; }
 
-            [ForeignKey("MunicipioId")]
-            public Municipio Municipio { get; set; }
+            //[ForeignKey("MunicipioId")]
+            //public Municipio Municipio { get; set; }
 
             public string Role { get; set; }
+
+            public IEnumerable<SelectListItem> ListaRole { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
+
+            Input = new InputModel()
+            {
+                ListaRole = _roleManager.Roles.Where(r => r.Name != DS.Role_JefeTatelentoHumano)
+                .Select(n => n.Name).Select(l => new SelectListItem
+                {
+                    Text = l,
+                    Value = l
+                })
+
+            };
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
@@ -107,8 +114,6 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-
-
                 var user = new UsuarioAplicacion
                 {
                     UserName = Input.UserName,
@@ -116,7 +121,8 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
                     Nombres = Input.Nombres,
                     Apellidos = Input.Apellidos,
                     Direccion = Input.Direccion,
-                    MunicipioId = Input.MunicipioId,
+                    PhoneNumber = Input.PhoneNumber,
+                    //MunicipioId = Int32.Parse(Input.MunicipioId),
                     Role = Input.Role
                 };
 
@@ -139,7 +145,17 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
                         await _roleManager.CreateAsync(new IdentityRole(DS.Role_AuxiliarAdmin));
                     }
 
-                    await _userManager.AddToRoleAsync(user, DS.Role_Admin);
+                    //await _userManager.AddToRoleAsync(user, DS.Role_Admin);
+
+                    if (user.Role == null)
+                    {
+                        await _userManager.AddToRoleAsync(user, DS.Role_AuxiliarAdmin);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, user.Role);
+                    }
+
 
 
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -159,8 +175,18 @@ namespace IPSSalud.Presentacion.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        if (user == null)
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
+                        else
+                        {
+                            //Administrador esta registrando un nuevo usuario
+                            return RedirectToAction("Index", "Usuario", new { Area = "Administrador" });
+                        
+                        }
+                        
                     }
                 }
                 foreach (var error in result.Errors)

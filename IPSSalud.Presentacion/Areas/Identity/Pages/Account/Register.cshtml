@@ -1,5 +1,7 @@
 ﻿@page
+@using IPSSalud.Utilidades
 @model RegisterModel
+
 @{
     ViewData["Title"] = "Registro";
 }
@@ -41,8 +43,7 @@
             </div>
             
             
-            <div class="form-floating">
-
+           @* <div class="form-floating">
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Seleccione el Departamento</option>
                     <option value="1">One</option>
@@ -51,27 +52,35 @@
                 </select>
             </div>
             <div class="form-floating">
-
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccione el municipio</option>
+                    <option selected> Seleccione el municipio</option>
+                    <option value="001">Manizales</option>
                 </select>
-            </div>
-            
+            </div>*@
+
             <div class="form-floating">
-                <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" />
+                <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" value="administrador"/>
                 <label asp-for="Input.UserName"></label>
                 <span asp-validation-for="Input.UserName" class="text-danger"></span>
             </div>
             <div class="form-floating">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" value="Admin1234*" />
                 <label asp-for="Input.Password"></label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
             <div class="form-floating">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" value="Admin1234*" />
                 <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+
+            @if (User.IsInRole(DS.Role_Admin))
+            {
+                <div class="form-group">
+                    <label asp-for="Input.Role"></label>
+                    @Html.DropDownListFor(r => r.Input.Role, Model.Input.ListaRole,"Seleccione Rol", new{ @class="form-control"})
+                </div>
+            }
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
     </div>

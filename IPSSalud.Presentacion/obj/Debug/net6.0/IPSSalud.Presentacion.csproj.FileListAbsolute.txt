@@ -565,3 +565,13 @@ C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\obj\Debug\net
 C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\obj\Debug\net6.0\IPSSalud.Presentacion.pdb
 C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\obj\Debug\net6.0\IPSSalud.Presentacion.genruntimeconfig.cache
 C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\obj\Debug\net6.0\ref\IPSSalud.Presentacion.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\Rotativa\Windows\wkhtmltoimage.exe
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\Rotativa\Windows\wkhtmltopdf.exe
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\JUAN\Documents\Desarrollos\IPSSalud\IPSSalud.Presentacion\bin\Debug\net6.0\Rotativa.dll

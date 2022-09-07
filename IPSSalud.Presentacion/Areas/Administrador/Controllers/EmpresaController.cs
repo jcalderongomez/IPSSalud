@@ -1,10 +1,13 @@
 ﻿using IPSSalud.AccesoDatos.Repositorio.IRepositorio;
 using IPSSalud.Modelos;
+using IPSSalud.Utilidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IPSSalud.Presentacion.Areas.Administrador.Controllers
 {
     [Area("Administrador")]
+    [Authorize(Roles = DS.Role_Admin)]
     public class EmpresaController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;

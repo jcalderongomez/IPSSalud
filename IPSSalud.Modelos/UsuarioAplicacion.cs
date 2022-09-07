@@ -18,10 +18,10 @@ namespace IPSSalud.Modelos
         public string Apellidos { get; set; }
         public string Direccion { get; set; }
         
-        public string MunicipioId { get; set; }
+        //public int MunicipioId { get; set; }
         
-        [ForeignKey ("MunicipioId")]
-        public Municipio Municipio { get; set; }
+        //[ForeignKey ("MunicipioId")]
+        //public Municipio Municipio { get; set; }
 
         [NotMapped]
         public string Role { get; set; }
