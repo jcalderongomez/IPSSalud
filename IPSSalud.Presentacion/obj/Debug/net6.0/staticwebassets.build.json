@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qsd+BK9kyOYKTjASyqGgFaI0f+ZRq6B9esY2I9b+rD8=",
+  "Hash": "12oqR5R4X+ZUR50KIXhzS60TzWJDavpWW1FpClRmDiI=",
   "Source": "IPSSalud.Presentacion",
   "BasePath": "_content/IPSSalud.Presentacion",
   "Mode": "Default",
@@ -36023,6 +36023,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\wwwroot\\js\\_municipio.js",
+      "SourceId": "IPSSalud.Presentacion",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\wwwroot\\",
+      "BasePath": "_content/IPSSalud.Presentacion",
+      "RelativePath": "js/_municipio.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\_municipio.js"
+    },
+    {
       "Identity": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\wwwroot\\js\\departamento.js",
       "SourceId": "IPSSalud.Presentacion",
       "SourceType": "Discovered",
@@ -36055,23 +36072,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\empresa.js"
-    },
-    {
-      "Identity": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\wwwroot\\js\\municipio.js",
-      "SourceId": "IPSSalud.Presentacion",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\wwwroot\\",
-      "BasePath": "_content/IPSSalud.Presentacion",
-      "RelativePath": "js/municipio.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\municipio.js"
     },
     {
       "Identity": "C:\\Users\\JUAN\\Documents\\Desarrollos\\IPSSalud\\IPSSalud.Presentacion\\wwwroot\\js\\site.js",

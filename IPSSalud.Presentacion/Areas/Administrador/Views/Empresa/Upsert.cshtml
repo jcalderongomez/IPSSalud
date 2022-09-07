@@ -1,4 +1,4 @@
-﻿@model IPSSalud.Modelos.Empresa
+﻿@model IPSSalud.Modelos.ViewModels.EmpresaVM
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,7 +9,7 @@
     <div class="row p-3 border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     </div>
-    @if (Model.Id != 0) 
+    @if (Model.Empresa.Id != 0) 
     {
         //
         titulo = "Actualizar Empresa";
@@ -20,32 +20,61 @@
     <div class="col8 pt-4">
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="NombreEmpresa"></label>
-                <span asp-validation-for="NombreEmpresa" class="text-danger"></span>
+                <label asp-for="Empresa.NitEmpresa"></label>
+                <span asp-validation-for="Empresa.NitEmpresa" class="text-danger"></span>
+            </div>
+
+            <div class="col-4">
+                <label asp-for="Empresa.NombreEmpresa"></label>
+                <span asp-validation-for="Empresa.NombreEmpresa" class="text-danger"></span>
             </div>
             <div class="col-4">
-                <label asp-for="Descripcion"></label>
-                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                <label asp-for="Empresa.Descripcion"></label>
+                <span asp-validation-for="Empresa.Descripcion" class="text-danger"></span>
             </div>
             <div class="col-4">
-                <label asp-for="Direccion"></label>
-                <span asp-validation-for="Direccion" class="text-danger"></span>
+                <label asp-for="Empresa.Direccion"></label>
+                <span asp-validation-for="Empresa.Direccion" class="text-danger"></span>
             </div>
             <div class="col-4">
-                <label asp-for="Telefono"></label>
-                <span asp-validation-for="Telefono" class="text-danger"></span>
+                <label>Telefono</label>
+                <span asp-validation-for="Empresa.Telefono" class="text-danger"></span>
+            </div>
+            
+            <input id="nombre">
+            <button onclick="return validar()"></button>
+
+
+
+            <div class="col-5">
+                <label>Departamento</label>
+                <select name="DepartamentoId" class="DepartamentoId" asp-items="Model.DepartametoLista" id="DepartamentoId" class="form-select">
+                        <option selected>Seleccione el Departamento</option>
+                </select>
+            </div>
+            <div class="col-5">
+                <label>Municipio</label>
+                <select name="MunicipioId" id="MunicipioId"
+                        asp-items="@(new SelectList(string.Empty,"Id","Name"))" class="form-select">
+                </select>
             </div>
             <div class="col-4">
-                <select asp-for="Estado" class="form-control"> 
+                <div class="form-group">
+                    <label asp-for="Empresa.LogoUrl"></label>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <select asp-for="Empresa.Estado" class="form-control"> 
                     <option value="true">Activo</option>
                     <option value="false">Inactivo</option>
                 </select>
             </div>
             <div class="form-group row">
                 <div class="col-8 offset-4">
-                    @if (Model.Id != 0)
-                    { 
-                        <partial name="_BotonesActualizarYRegresar" model="Model.Id"/>
+                    @if (Model.Empresa.Id != 0)
+                    {
+                        <partial name="_BotonesActualizarYRegresar" model="Model.Empresa.Id" />
                     }
                     else
                     {
@@ -58,7 +87,25 @@
     </div>
 </form>
 
-@section Scritps{
-    <partial name="_ValidationScriptsPartial"/>
-}
+@section Scripts {
+ <script>
+        $(document).ready(function () {
+            $("#DepartamentoId").on('change', function(){
+                getMunicipios();
+            });
+        });
 
+        function getMunicipios() {
+            var url = '@Url.Content("~/")' + "Administrador/Municipio/MunicipioDepartamento";
+            var ddlsource = '#DepartamentoId';
+            $.getJSON(url, { id: $(ddlsource).val() }, function (data) {
+                var items = '';
+                $('#MunicipioId').empty();
+                $.each(data, function (i, municipio) {
+                    items += "<option value='" + municipio.value + "'>" + municipio.text + "</option>";
+                });
+                $('#MunicipioId').html(items);
+        })
+   }
+</script>   
+}

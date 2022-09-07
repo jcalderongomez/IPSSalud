@@ -16,7 +16,7 @@ function loadDataTable() {
         "columns": [
             { "data": "codigoDaneMunicipio", "width": "20%" },
             { "data": "codigoDaneDepartamento  ", "width": "20%" },
-            { "data": "nombreMunicipio", "width": "20%" },
+            
             {
                 "data": "estado",
                 "render": function (data) {
