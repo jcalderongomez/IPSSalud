@@ -2,98 +2,180 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var titulo ="Crear Empresa";
+    var titulo = "Crear Empresa";
 }
 
-<form method="post">
-    <div class="row p-3 border">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    </div>
-    @if (Model.Empresa.Id != 0) 
-    {
-        //
-        titulo = "Actualizar Empresa";
-    }
-    <div class="col-12 border-bottom">
-        <h2 class="text-primary">@titulo</h2>
-    </div>
-    <div class="col8 pt-4">
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="Empresa.NitEmpresa"></label>
-                <span asp-validation-for="Empresa.NitEmpresa" class="text-danger"></span>
-            </div>
 
-            <div class="col-4">
-                <label asp-for="Empresa.NombreEmpresa"></label>
-                <span asp-validation-for="Empresa.NombreEmpresa" class="text-danger"></span>
-            </div>
-            <div class="col-4">
-                <label asp-for="Empresa.Descripcion"></label>
-                <span asp-validation-for="Empresa.Descripcion" class="text-danger"></span>
-            </div>
-            <div class="col-4">
-                <label asp-for="Empresa.Direccion"></label>
-                <span asp-validation-for="Empresa.Direccion" class="text-danger"></span>
-            </div>
-            <div class="col-4">
-                <label>Telefono</label>
-                <span asp-validation-for="Empresa.Telefono" class="text-danger"></span>
-            </div>
-            
-            <input id="nombre">
-            <button onclick="return validar()"></button>
-
-
-
-            <div class="col-5">
-                <label>Departamento</label>
-                <select name="DepartamentoId" class="DepartamentoId" asp-items="Model.DepartametoLista" id="DepartamentoId" class="form-select">
-                        <option selected>Seleccione el Departamento</option>
-                </select>
-            </div>
-            <div class="col-5">
-                <label>Municipio</label>
-                <select name="MunicipioId" id="MunicipioId"
-                        asp-items="@(new SelectList(string.Empty,"Id","Name"))" class="form-select">
-                </select>
-            </div>
-            <div class="col-4">
-                <div class="form-group">
-                    <label asp-for="Empresa.LogoUrl"></label>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <select asp-for="Empresa.Estado" class="form-control"> 
-                    <option value="true">Activo</option>
-                    <option value="false">Inactivo</option>
-                </select>
-            </div>
-            <div class="form-group row">
-                <div class="col-8 offset-4">
+<form method="post" enctype="multipart/form-data">
+    <div class="backgroundWhiteBorder">
+        <div class="container">
+            <div class="card">
+                <div class="card-header  text-light ml-0">
+                    <div class="row p-3 border-0">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </div>
                     @if (Model.Empresa.Id != 0)
                     {
-                        <partial name="_BotonesActualizarYRegresar" model="Model.Empresa.Id" />
+                        //
+                        titulo = "Actualizar Empresa";
+                        <input type="hidden" asp-for="Empresa.Id" />
                     }
-                    else
-                    {
-                        <partial name="_BotonesCrearYRegresar"/>
-                    }
+                    <div class="col-12 border-bottom">
+                        <h2 class="text-primary">@titulo</h2>
+                    </div>
 
+                </div>
+                <div class="card-body">
+                    <div class="container rounded p-2">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 pb-4">
+                                <div class="row">
+                                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="text-info">Detalles la Empresa:</span>
+                                    </h4>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label asp-for="Empresa.NitEmpresa"></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Empresa.NitEmpresa" type="text" class="form-control" />
+                                        <span asp-validation-for="Empresa.NitEmpresa" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label asp-for="Empresa.NombreEmpresa"></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Empresa.NombreEmpresa" type="text" class="form-control" />
+                                        <span asp-validation-for="Empresa.NombreEmpresa" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label asp-for="Empresa.Descripcion"></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Empresa.Descripcion" type="text" class="form-control" />
+                                        <span asp-validation-for="Empresa.Descripcion" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label>Departamento</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select name="DepartamentoId" class="DepartamentoId" asp-items="Model.DepartametoLista" 
+                                            id="DepartamentoId" class="form-select">
+                                            <option selected>Seleccione el Departamento</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label>Municipio</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select asp-for="Empresa.MunicipioId" id="MunicipioId"
+                                                asp-items="@(new SelectList(string.Empty,"Id","Name"))" class="form-control">
+                                        </select>
+
+                                        <span asp-validation-for= "Empresa.MunicipioId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label>Direccion</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Empresa.Direccion" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label>Telefeono</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Empresa.Telefono" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label asp-for="Empresa.LogoUrl"></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input asp-for="Empresa.LogoUrl" type="file" name="LogoUrl" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="row my-1">
+                                    <div class="col-3">
+                                        <label asp-for="Empresa.Estado"></label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select asp-for="Empresa.Estado" class="form-select">
+                                            <option value="true">Activo</option>
+                                            <option value="false">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="form-group row">
+                            <div class="col-8 offset-4">
+                                @if (Model.Empresa.Id != 0)
+                                {
+                                    <partial name="_BotonesActualizarYRegresar" model="Model.Empresa.Id" />
+                                }
+                                else
+                                {
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" onclick="return validarEntrada()" class="btn btn-primary form-control">Crear</button>
+                                        </div>
+                                        <div class="col">
+                                            <a asp-action="Index" class="btn btn-success form-control">Regrear</a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    @if(Model.Empresa.Id!=0)
+    {
+        <div class="col-3">
+            <img src="@Model.Empresa.LogoUrl" style="width:100%; boder-radius:5px; boder:1px solid #bbb9b9"/>
+        </div>
+    }
 </form>
 
 @section Scripts {
- <script>
+
+    <partial name="_ValidationScriptsPartial" />
+    
+    <script>
         $(document).ready(function () {
             $("#DepartamentoId").on('change', function(){
                 getMunicipios();
             });
         });
+
+        function validarEntrada(){
+            if(document.getElementById("LogoUrl").value == ""){
+                swal("Error","Seleccione una Imagen","error");
+                return false;
+            }
+            return true;
+        }
+
 
         function getMunicipios() {
             var url = '@Url.Content("~/")' + "Administrador/Municipio/MunicipioDepartamento";
@@ -102,7 +184,11 @@
                 var items = '';
                 $('#MunicipioId').empty();
                 $.each(data, function (i, municipio) {
-                    items += "<option value='" + municipio.value + "'>" + municipio.text + "</option>";
+                    if(i==0){
+                        items += "<option>Seleccione el Municipio </option><option value='" + municipio.value + "'>" + municipio.text + "</option>";
+                    }
+                    else
+                        items += "<option value='" + municipio.value + "'>" + municipio.text + "</option>";
                 });
                 $('#MunicipioId').html(items);
         })

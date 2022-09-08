@@ -42,6 +42,5 @@ namespace IPSSalud.Modelos
 
         [Required]
         public bool Estado { get; set; }
-
     }
 }
